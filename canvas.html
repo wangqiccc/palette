@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <nav>
+        <dl class="item menulist prevent">
+            <dt id="menu">菜单</dt>
+            <dd id="save">保存</dd>
+            <dd id="redo">撤销</dd>
+            <dd id="clear">清空</dd>
+            <dd id="cut">剪切</dd>
+            <dd id="copy">复制</dd>
+        </dl>
+        <div class="item shape prevent state">
+            <div class="rect">矩形</div>
+            <div class="circle">圆</div>
+            <div class="line" style="background:#ccc">线</div>
+        </div>
+        <div class="item style">
+           类型选择 <select name="" id="">
+                <option value="fill">填充</option>
+                <option value="stroke">描边</option>
+            </select>
+        </div>
+        <div class="item">
+            线条粗细 <input type="range" min="1" max="10" value="1" style="width:70px;vertical-align: middle">
+        </div>
+        <div class="item">
+            画笔颜色 <input type="color" id="pencolor">
+        </div>
+        <div class="item">
+            画布颜色 <input type="color" id="canvascolor" value="#ffffff">
+        </div>
+        <div class="item pen state">
+            铅笔
+        </div>
+        <div class="item eraser state">
+            橡皮擦
+        </div>
+        <div class="item apply state">
+          涂抹
+        </div>
+    </nav>
+    <div class="container">
+        <canvas width=800 height=500>
+            您的浏览器不支持画布请升级！
+        </canvas>
+    </div>
+</body>
+<script src="jquery.js"></script>
+<script src="draw.js"></script>
+<script src="canvas.js"></script>
+</html>
